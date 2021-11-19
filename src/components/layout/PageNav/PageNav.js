@@ -1,18 +1,20 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import Button from '@mui/material/Button';
+import styles from './PageNav';
 
-class PageNav extends React.Component {
-  render(){
+const PageNav = () => {
+  
     return (
-      <nav>
-        <NavLink exact to={`${process.env.PUBLIC_URL}/`} activeClassName='active'>Home</NavLink>
-        <NavLink to={`${process.env.PUBLIC_URL}/login`} activeClassName='active'>Login</NavLink>
-        <NavLink to={`${process.env.PUBLIC_URL}/ordering`} activeClassName='active'>OrderWaiter</NavLink>
-        <NavLink to={`${process.env.PUBLIC_URL}/tables`} activeClassName='active'>Tables</NavLink>
-        <NavLink to={`${process.env.PUBLIC_URL}/kitchen`} activeClassName='active'>Kitchen</NavLink>
+      <nav className={styles.component}>
+        <Button variant="contained" size="large" color='primary' component={NavLink} exact to={`${process.env.PUBLIC_URL}/`} activeClassName='active'>Home</Button>
+        <Button variant="contained" size="large" color='primary' component={NavLink} to={`${process.env.PUBLIC_URL}/login`} activeClassName='active'>Login</Button>
+        <Button variant="contained" size="large" color='primary' component={NavLink} to={`${process.env.PUBLIC_URL}/ordering`} activeClassName='active'>OrderWaiter</Button>
+        <Button variant="contained" size="large" color='primary' component={NavLink} to={`${process.env.PUBLIC_URL}/tables`} activeClassName='active'>Tables</Button>
+        <Button variant="contained" size="large" color='primary' component={NavLink} to={`${process.env.PUBLIC_URL}/kitchen`} activeClassName='active'>Kitchen</Button>
       </nav>
     );
-  }
+  
 }
 
 export default PageNav;
