@@ -68,9 +68,8 @@ const renderActions = status => {
 };
 
 const Ordering = () => {
-    return (
-      
-      <div>
+  return ( 
+    <div>
       <Typography variant='h4'>OrderWaiter view</Typography>
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label='simple table'>

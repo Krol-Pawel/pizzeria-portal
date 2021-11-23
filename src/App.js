@@ -7,13 +7,16 @@ import Kitchen from "./components/views/Kitchen/Kitchen";
 import Ordering from "./components/views/Ordering/Ordering";
 import Booking from "./components/views/Booking/Booking";
 import Event from "./components/views/Event/Event";
-import OrderingNew from "./components/views/OrderingNew/OrderingNew";
+import OrderingNew from "./components/views/OrderingNew/OrderingNewContainer";
 import Order from "./components/views/Order/Order";
 import Homepage from "./components/views/Homepage/Homepage";
 import { StylesProvider } from '@material-ui/styles';
+import { Provider } from "react-redux";
+import store from "./redux/store";
 
 function App() {
   return (
+    <Provider store={store}>
     <BrowserRouter basename={'/panel'}>
       <StylesProvider injectFirst>
         <MainLayout>
@@ -31,6 +34,7 @@ function App() {
         </MainLayout>
       </StylesProvider>
     </BrowserRouter>
+    </Provider>
   );
 }
 
