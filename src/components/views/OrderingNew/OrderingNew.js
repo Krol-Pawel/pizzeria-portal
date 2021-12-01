@@ -18,7 +18,7 @@ class OrderingNew extends React.Component {
   }
   render() {
     const { loading: { active, error }, products } = this.props;
-
+    console.log(active, products);
     const Wrapper = props => (
       <div>
         <h2>NewOrder view</h2>
